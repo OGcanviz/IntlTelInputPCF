@@ -1,0 +1,13 @@
+.iti__flag {background-image: url("../IntlTelInputLib/img/flags.png");}
+ 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../IntlTelInputLib/img/flags2x.png");}
+}
+
+.IntlTelInputComponent input {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.2;
+    border: 1px solid rgb(0, 18, 107);
+    padding: 5px 5px 5px 12px;
+}
