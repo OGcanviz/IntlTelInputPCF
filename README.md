@@ -6,7 +6,7 @@ It's created for entering and validating international telephone numbers. It add
 <img src="https://raw.github.com/OGcanviz/IntlTelInputPCF/master/images/vanilla.png" width="424px" height="246px">
 
 ## Installation
-Follow this [article](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/component-framework-for-canvas-apps) to setup your enviornment and install the component.
+Follow this [article](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/component-framework-for-canvas-apps) to setup your enviornment and install the component [solution package](https://github.com/OGcanviz/IntlTelInputPCF/tree/master/releases).
 
 ## Dependencies
 [intl-tel-input](https://www.npmjs.com/package/intl-tel-input)
