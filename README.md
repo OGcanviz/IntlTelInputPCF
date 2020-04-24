@@ -3,6 +3,8 @@ This PowerApps Component Framework (PCF) component includes a textbox that allow
 
 <img src="https://raw.github.com/OGcanviz/IntlTelInputPCF/master/images/vanilla.png" width="424px" height="246px">
 
+<img src="https://raw.github.com/OGcanviz/IntlTelInputPCF/master/images/PCFIntlPhone.gif">
+
 ## Libraries
 This component uses the following library.
 https://www.npmjs.com/package/intl-tel-input
