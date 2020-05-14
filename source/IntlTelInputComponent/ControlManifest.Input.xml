@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="Canviz" constructor="IntlTelInputComponent" version="0.0.12" display-name-key="IntlTelInputComponent" description-key="IntlTelInputComponent description" control-type="standard">
+  <control namespace="Canviz" constructor="IntlTelInputComponent" version="0.0.14" display-name-key="IntlTelInputComponent" description-key="IntlTelInputComponent description" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="Phone" display-name-key="Phone_Display_Key" description-key="Phone_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
     <!-- 

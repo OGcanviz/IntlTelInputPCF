@@ -21,13 +21,15 @@ export class IntlTelInputComponent implements ComponentFramework.StandardControl
 	/**
 	 * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
 	 * Data-set values are not initialized here, use updateView.
-	 * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
+	 * @param contextAny The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to property names defined in the manifest, as well as utility functions.
 	 * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
 	 * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
 	 * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
 	 */
-	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
+	public init(contextAny: any, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 	{
+		var context = contextAny as ComponentFramework.Context<IInputs>;
+
 		this._notifyOutputChanged = notifyOutputChanged;
 
 		this._phoneInput = document.createElement('input');
@@ -40,6 +42,12 @@ export class IntlTelInputComponent implements ComponentFramework.StandardControl
 
 		// NOTICE: has to load the utils.js in this way, as this component is initialized after window.load event, then utils.js defined in utilsScript option couldn't be loaded as expected.
 		window.intlTelInputGlobals.loadUtils('https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.1.0/js/utils.js');
+
+		this._phoneInput.setAttribute('tabindex', contextAny.accessibility.assignedTabIndex);
+		var dropdown = container.querySelector('.iti__selected-flag');
+		if (dropdown) {
+			dropdown.setAttribute('tabindex', contextAny.accessibility.assignedTabIndex);
+		}
 	}
 
 	private onPhoneChange(event: Event): void {
